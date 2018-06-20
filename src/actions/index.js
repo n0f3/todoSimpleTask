@@ -2,17 +2,22 @@ import ActionTypes from './types';
 
 let taskId = 0;
 
-export const addTodo = content => ({
+export const addTask = () => ({
   type: ActionTypes.ADD_TASK,
-  id: taskId,
-  content
+  id: taskId++,
+  content: '',
 });
 
-export const editTodo = (id, content) => ({
+export const saveTask = (id, content) => ({
+  type: ActionTypes.SAVE_TASK,
+  content,
+});
+
+export const editTask = (id, content) => ({
   type: ActionTypes.EDIT_TASK,
   content
 });
 
-export const completeTodo = id => ({
-  type: ActionTypes.COMPLETE_TASK
+export const toggleTask = id => ({
+  type: ActionTypes.TOGGLE_TASK
 })

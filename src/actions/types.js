@@ -1,9 +1,11 @@
 const ADD_TASK = 'ADD_TASK';
 const EDIT_TASK = 'EDIT_TASK';
-const COMPLETE_TASK = 'COMPLETE_TASK';
+const TOGGLE_TASK = 'COMPLETE_TASK';
+const SAVE_TASK = 'SAVE_TASK';
 
 export default {
   ADD_TASK,
   EDIT_TASK,
-  COMPLETE_TASK
+  TOGGLE_TASK,
+  SAVE_TASK,
 }

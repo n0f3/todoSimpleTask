@@ -7,27 +7,30 @@ const tasks = (state = [], action) => {
         id: action.id,
         content: action.content,
         isComplete: false,
+        isSaved: false,
       }];
-      
+    case ActionTypes.SAVE_TASK:
+      return state.map(
+        task => task.id === action.id ? {
+          ...task,
+          content: action.content,
+          isSaved: true,
+        } : task
+      );
     case ActionTypes.EDIT_TASK:
-      return [
-        state.map(
+      return state.map(
           task => task.id === action.id ? {
             ...task,
             content: action.content,
           } : task
-        )
-      ];
-    case ActionTypes.COMPLETE_TASK:
-      return [
-        state.map(
+        );
+    case ActionTypes.TOGGLE_TASK:
+      return state.map(
           task => task.id === action.id ? {
             ...task,
-            content: '',
-            isComplete: true,
+            isComplete: !task.isComplete,
           } : task
-        )
-      ];
+        );
     default:
       return state;
   }

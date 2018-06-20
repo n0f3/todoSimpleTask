@@ -1,0 +1,27 @@
+@import "styles/_variables";
+
+.tasks {
+  &-list {
+    list-style: none;
+    padding: 0;
+  }
+  &-status {
+    &-container {
+      width: 100%;
+      border-radius: 15px;
+      background-color: $blue;
+      text-align: left;
+      padding: 0.5rem;
+      &.complete {
+        background-color: $green;
+      }
+    }
+    &-message {
+      padding: 1rem;
+      color: $white;
+      &-title {
+        font-size: 26px;
+      }
+    }
+  }
+}

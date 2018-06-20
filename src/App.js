@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import Greeting from './components/Greeting';
+import TasksStatusContainer from './containers/TasksStatusContainer';
+import TasksListContainer from './containers/TasksListContainer';
 import './styles/App.css';
 
 class App extends Component {
@@ -12,7 +14,10 @@ class App extends Component {
         >
           <Greeting />
         </Header>
-
+        <div className='App-container'>
+          <TasksStatusContainer />
+          <TasksListContainer />
+        </div>
       </div>
     );
   }
