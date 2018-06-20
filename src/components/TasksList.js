@@ -3,19 +3,26 @@ import AddTask from '../containers/AddTask';
 import Task from './Task';
 import '../styles/Tasks.css';
 
-const TasksList = ({ tasks, editTask, saveTask, toggleTask }) => (
-  <ul className='tasks-list'>
-    {
-      tasks.map(
-        (task, index) =>
-          (<li key={index}>
-            <Task {...task} handleEdit={editTask} handleSave={saveTask} handleToggle={toggleTask} />
-          </li>)
-      )
-    }
-    <li>
+const TasksList = ({ tasks, editTask, saveTask, toggleTask, selectTask }) => (
+  <div className='tasks-container'>
+    <div className='tasks-list'>
+      {
+        tasks.map(
+          (task, index) =>
+            (
+              <Task
+                key={index}
+                {...task}
+                handleEdit={editTask}
+                handleSave={saveTask}
+                handleToggle={toggleTask}
+                handleSelect={selectTask}
+              />
+            )
+          )
+      }
       <AddTask />
-    </li>
-  </ul>
+    </div>
+  </div>
 )
 export default TasksList;

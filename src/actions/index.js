@@ -10,14 +10,21 @@ export const addTask = () => ({
 
 export const saveTask = (id, content) => ({
   type: ActionTypes.SAVE_TASK,
+  id,
   content,
 });
 
-export const editTask = (id, content) => ({
+export const editTask = (id) => ({
   type: ActionTypes.EDIT_TASK,
-  content
+  id
 });
 
 export const toggleTask = id => ({
-  type: ActionTypes.TOGGLE_TASK
-})
+  type: ActionTypes.TOGGLE_TASK,
+  id
+});
+
+export const selectTask = id => ({
+  type: ActionTypes.SELECT_TASK,
+  id,
+});

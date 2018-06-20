@@ -11,10 +11,6 @@ if (process.env.NODE_ENV === 'development') {
 
 const defaultState = {
   tasks: [],
-  // for login functionality if needed
-  user: {
-    name: 'user',
-  }
 };
 
 // Adding chrome redux devtools if available
