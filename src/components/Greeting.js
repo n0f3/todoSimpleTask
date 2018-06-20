@@ -1,8 +1,12 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 const Greeting = (props) => (
-  <div>
-    {`${props.message},${props.userName}`}
+  <div style={{
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center'
+  }}>
+      {`${props.message},${props.userName}`}
   </div>
 );
 
