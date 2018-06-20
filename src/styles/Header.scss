@@ -1,0 +1,15 @@
+@import "styles/_variables";
+
+.header {
+  border-bottom: 2px solid $black;
+  background-color: $white;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  &-title {
+    color: $blue;
+    font-size: 26px;
+    left: 0;
+  }
+}
