@@ -3,6 +3,7 @@
 .edit-task {
   padding: 1rem;
   input {
+    color: $task-text-color;
     border: none;
     flex: 1 1 80%;
     &:focus {

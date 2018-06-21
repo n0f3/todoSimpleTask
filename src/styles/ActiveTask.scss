@@ -1,11 +1,19 @@
+@import 'styles/variables';
+
 .active-task {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
+  &-status {
+    font-size: 14px;
+    color: $task-status-color;
+    font-weight: 200;
+  }
   h3 {
     margin-top: 0;
+    margin-bottom: 0.75rem;
   }
 }

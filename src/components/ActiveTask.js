@@ -6,7 +6,7 @@ const ActiveTask = props => (
     <h3>
       { props.content || 'Placeholder Task' }
     </h3>
-    <div>
+    <div className='active-task-status'>
       {
         props.isComplete ?
           'Completed' :
