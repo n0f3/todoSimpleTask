@@ -26,13 +26,13 @@ class EditTask extends Component {
           placeholder='Enter task name'
           value={this.state.name}
           type='text'
+          maxLength='15'
           onChange={this.handleInput}
         />
         <button
           className='save-btn'
           onClick={() => {
             this.props.onTaskSave(
-              this.props.id,
               this.state.name,
             )
           }}

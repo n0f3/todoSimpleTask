@@ -1,6 +1,7 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 import AddTask from '../containers/AddTask';
-import Task from './Task';
+import Task from '../containers/Task';
 import '../styles/Tasks.css';
 
 const TasksList = ({ tasks, editTask, saveTask, toggleTask, selectTask, deleteTask }) => (
@@ -26,4 +27,9 @@ const TasksList = ({ tasks, editTask, saveTask, toggleTask, selectTask, deleteTa
     </div>
   </div>
 )
+
+TasksList.propTypes = {
+  tasks: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
 export default TasksList;
