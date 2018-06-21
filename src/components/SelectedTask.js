@@ -51,6 +51,7 @@ SelectedTask.propTypes = {
   handleToggle: PropTypes.func.isRequired,
   handleEdit: PropTypes.func.isRequired,
   handleDelete: PropTypes.func.isRequired,
+  isComplete: PropTypes.bool.isRequired,
 };
 
 export default SelectedTask;

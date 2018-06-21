@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import '../styles/EditTask.css';
 
 class EditTask extends Component {
+
+  static propTypes = {
+    content: PropTypes.string.isRequired,
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -43,4 +49,5 @@ class EditTask extends Component {
     )
   }
 }
+
 export default EditTask;

@@ -36,7 +36,6 @@ const Task = props => {
               /> :
               isTaskEditing ?
                 <EditTask
-                  id={props.id}
                   content={props.content}
                   onTaskSave={
                     (newContent) => props.saveTask(newContent)

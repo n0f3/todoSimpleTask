@@ -1,4 +1,5 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 import '../styles/ActiveTask.css';
 
 const ActiveTask = props => (
@@ -15,5 +16,10 @@ const ActiveTask = props => (
     </div>
   </div>
 );
+
+ActiveTask.propTypes = {
+  content: PropTypes.string.isRequired,
+  isComplete: PropTypes.bool.isRequired,
+};
 
 export default ActiveTask;
