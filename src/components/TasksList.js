@@ -3,7 +3,7 @@ import AddTask from '../containers/AddTask';
 import Task from './Task';
 import '../styles/Tasks.css';
 
-const TasksList = ({ tasks, editTask, saveTask, toggleTask, selectTask }) => (
+const TasksList = ({ tasks, editTask, saveTask, toggleTask, selectTask, deleteTask }) => (
   <div className='tasks-container'>
     <div className='tasks-list'>
       {
@@ -17,6 +17,7 @@ const TasksList = ({ tasks, editTask, saveTask, toggleTask, selectTask }) => (
                 handleSave={saveTask}
                 handleToggle={toggleTask}
                 handleSelect={selectTask}
+                handleDelete={deleteTask}
               />
             )
           )

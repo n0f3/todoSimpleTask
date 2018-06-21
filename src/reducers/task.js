@@ -20,10 +20,10 @@ const tasks = (state = [], action) => {
       );
     case ActionTypes.EDIT_TASK:
       return state.map(
-          task => task.id === action.id ? {
-            ...task,
-            isEditing: true,
-          } : task
+        task => task.id === action.id ? {
+          ...task,
+          isEditing: true,
+        } : task
       );
     case ActionTypes.SELECT_TASK:
       return state.map(
@@ -34,11 +34,16 @@ const tasks = (state = [], action) => {
       );
     case ActionTypes.TOGGLE_TASK:
       return state.map(
-          task => task.id === action.id ? {
-            ...task,
-            isComplete: !task.isComplete,
-          } : task
-        );
+        task => task.id === action.id ? {
+          ...task,
+          isComplete: !task.isComplete,
+        } : task
+      );
+    case ActionTypes.DELETE_TASK:
+      return [
+        ...state.slice(0, action.id),
+        ...state.slice(action.id + 1)
+      ];
     default:
       return state;
   }

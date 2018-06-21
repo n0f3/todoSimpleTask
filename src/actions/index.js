@@ -28,3 +28,8 @@ export const selectTask = id => ({
   type: ActionTypes.SELECT_TASK,
   id,
 });
+
+export const deleteTask = id => ({
+  type: ActionTypes.DELETE_TASK,
+  id
+});

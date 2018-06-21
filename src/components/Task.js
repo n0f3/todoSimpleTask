@@ -13,7 +13,6 @@ const Task = props => {
         <div
           className='task'
           onClick={() => {
-            console.log('clicked');
             if (!isTaskEditing)
               props.handleSelect(props.id);
           }}>
@@ -23,6 +22,7 @@ const Task = props => {
                 isComplete={isTaskComplete}
                 handleToggle={() => props.handleToggle(props.id)}
                 handleEdit={() => props.handleEdit(props.id)}
+                handleDelete={() => props.handleDelete(props.id)}
               /> :
               isTaskEditing ?
                 <EditTask
@@ -50,6 +50,7 @@ Task.propTypes = {
   handleSave: PropTypes.func.isRequired,
   handleEdit: PropTypes.func.isRequired,
   handleToggle: PropTypes.func.isRequired,
+  handleDelete: PropTypes.func.isRequired,
 };
 
 export default Task;

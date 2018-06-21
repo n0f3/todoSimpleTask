@@ -1,9 +1,13 @@
 import React from 'react';
 import '../styles/SelectTask.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 const SelectedTask = props => (
   <div className='select-task'>
-    <button onClick={props.handleToggle}>
+    <button
+      className='task-button'
+      onClick={props.handleToggle}>
       {
         props.isComplete ?
           (<span style={{
@@ -16,9 +20,29 @@ const SelectedTask = props => (
           </span>)
       }
     </button>
-    <button style={{
+    <button
+      className='task-button'
+      style={{
       color: 'white',
-    }} onClick={props.handleEdit}>Edit</button>
+      }}
+      onClick={props.handleEdit}
+    >
+      Edit
+    </button>
+    <button
+      style={{
+        position: 'absolute',
+        top: 10,
+        right: 0,
+        zIndex: 10
+      }}
+      onClick={props.handleDelete}
+    >
+      <FontAwesomeIcon
+        icon={faTrashAlt}
+        color='red'
+      />
+    </button>
   </div>
 );
 
