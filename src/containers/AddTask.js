@@ -8,8 +8,8 @@ const AddTask = ({ dispatch }) => (
     className='task'
     onClick={() => dispatch(addTask())}
   >
-    <div className='center-x-y'>
-      Add Task
+    <div>
+      &#43; Add Task
     </div>
   </div>
 );

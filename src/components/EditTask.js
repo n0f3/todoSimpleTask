@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/EditTask.css';
 
 class EditTask extends Component {
   constructor(props) {
@@ -17,13 +18,18 @@ class EditTask extends Component {
 
   render() {
     return (
-      <div >
+      <div className='edit-task'>
         <input
+          style={{
+            border: 'none',
+          }}
+          placeholder='Enter task name'
           value={this.state.name}
           type='text'
           onChange={this.handleInput}
         />
         <button
+          className='save-btn'
           onClick={() => {
             this.props.onTaskSave(
               this.props.id,

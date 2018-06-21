@@ -19,7 +19,11 @@ const Task = props => {
           }}>
           {
             isTaskSelected ?
-              <SelectedTask { ...props} /> :
+              <SelectedTask
+                isComplete={isTaskComplete}
+                handleToggle={() => props.handleToggle(props.id)}
+                handleEdit={() => props.handleEdit(props.id)}
+              /> :
               isTaskEditing ?
                 <EditTask
                   id={props.id}
@@ -43,7 +47,6 @@ Task.propTypes = {
   id: PropTypes.number.isRequired,
   content: PropTypes.string,
   isComplete: PropTypes.bool.isRequired,
-  isSaved: PropTypes.bool.isRequired,
   handleSave: PropTypes.func.isRequired,
   handleEdit: PropTypes.func.isRequired,
   handleToggle: PropTypes.func.isRequired,

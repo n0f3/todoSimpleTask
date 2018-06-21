@@ -9,6 +9,14 @@ html {
   padding: 0;
 }
 
+button {
+  appearance: none !important;
+  border: none;
+  &:active {
+    outline: none;
+  }
+}
+
 * {
   box-sizing: border-box;
 }

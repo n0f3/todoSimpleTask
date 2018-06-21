@@ -11,13 +11,13 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: flex-start;
   }
   &-status {
     &-container {
       width: 100%;
       border-radius: 15px;
-      background-color: $blue;
       text-align: left;
       padding: 0.5rem;
       &.complete {
@@ -28,7 +28,8 @@
       padding: 1rem;
       color: $white;
       &-title {
-        font-size: 26px;
+        margin-top: 0;
+        margin-bottom: 0.25rem;
       }
     }
   }
