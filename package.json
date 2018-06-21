@@ -4,6 +4,10 @@
   "private": true,
   "homepage": "https://n0f3.github.io/todoSimpleTask/",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
+    "@fortawesome/free-regular-svg-icons": "^5.1.0-11",
+    "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
+    "@fortawesome/react-fontawesome": "0.1.0-11",
     "gh-pages": "^1.2.0",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.2",
